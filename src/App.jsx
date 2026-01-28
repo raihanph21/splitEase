@@ -66,12 +66,12 @@ function App() {
 
   return (
     <div className="app w-full p-5">
-      <div className="head sticky p-5 text-center text-transparent bg-clip-text bg-linear-to-br from-indigo-500 via-purple-600 to-pink-300 font-bold text-2xl shadow-xl mt-5 rounded-md border-2 border-violet-500">
+      <div className="head sticky p-5 text-center text-transparent bg-clip-text bg-linear-to-br from-indigo-500 via-purple-600 to-pink-300 font-bold text-3xl shadow-xl mt-5 rounded-md border-2 border-violet-500">
         Split Ease
       </div>
-      <div className="sidebar p-5 mt-20 shadow-md border-2 border-violet-500 rounded-md">
-        <div className="mb-5 text-center text-xl font-bold">Friends</div>
-        <div>
+      <div className="sidebar p-5 mt-10 shadow-md border-2 border-violet-500 rounded-md bg-violet-50">
+        <div className="mb-5 text-center text-2xl font-bold ">Friends</div>
+        <div className="">
           <FriendList
             friends={friends}
             onSelection={handleSelection}
@@ -162,7 +162,7 @@ function AddFriends({ onAddFriend }) {
 
   return (
     <form
-      className="form-add-friend border-2 mt-2 rounded-md border-violet-500 p-3 flex flex-col *:p-1"
+      className="form-add-friend border-2 mt-2 rounded-md border-violet-500 bg-violet-50 p-3 flex flex-col *:p-1"
       onSubmit={handleSubmit}
     >
       <label>🧑‍🤝‍🧑Friend</label>
@@ -200,7 +200,7 @@ function SplitBill({ selectedFriend, onSplitBill }) {
 
   return (
     <form
-      className="form-split-bill mt-3 border-2 shadow-2xl border-violet-500 rounded-md p-3 flex flex-col [&_input]:border [&_input]:border-violet-500 *:mt-1"
+      className="form-split-bill mt-3 border-2 shadow-2xl bg-violet-50 border-violet-500 rounded-md p-3 flex flex-col [&_input]:border [&_input]:border-violet-500 *:mt-1"
       onSubmit={handleSubmit}
     >
       <h2>SPLIT A BILL WITH {selectedFriend.name}</h2>
